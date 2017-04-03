@@ -24,7 +24,7 @@ for(var i=0; i<driver1.length; i++) {
 console.log(upperName);
 
 var backWards = "";
-for (var i = hacker2.length - 1; i >= 0; i--){
+for (var i = hacker2.length -1; i >= 0; i--){    // hacker2.length -1 because hacker2 has 4 characters, but starts at position 0 (0,1,2,3)
   backWards += hacker2[i];
 }
 console.log(backWards);
@@ -34,7 +34,11 @@ console.log(backWards);
 //Conditionals
 var palindrome = prompt("Type new string");
 
-palindrome = palindrome.replace(/[\s\,]/g, '');
+palindrome = palindrome.replace(/[\s\,]/g, '');  //[\s\,]/g, ''); removes all of the whitespace or commas in the string (ex: race car becomes "racecar")
+
+// [\s\,] = white space and commas
+// /g = global search
+//, '' = replace all whitespace and commas with ''
 
 
 var checkPal ="";
@@ -57,7 +61,8 @@ Aenean sollicitudin, orci sit amet interdum rhoncus, ligula augue pharetra lacus
 Maecenas vitae velit pretium, blandit odio a, aliquam nunc. Aliquam pretium, turpis ac finibus malesuada, eros massa tincidunt diam, non efficitur sem dui ut quam. Nunc at tincidunt magna, non tempus diam. Nullam accumsan suscipit ipsum, in dignissim nibh bibendum vel. Nulla viverra sodales neque, vitae fermentum nisi. Etiam lobortis pretium magna, vitae porta metus condimentum nec. Sed hendrerit venenatis ornare. Donec commodo vulputate nisi, in pulvinar felis lobortis dignissim. Etiam ac sodales mi, vel mollis turpis. Proin hendrerit odio non purus porttitor vestibulum. Duis accumsan quam ut urna viverra, a ultrices turpis consequat. Fusce pharetra sagittis turpis ut vestibulum. Aliquam in ligula laoreet nisi commodo venenatis. Sed et pellentesque eros, vitae sollicitudin mauris. Sed et ultricies nibh. Nunc auctor ante ac vestibulum egestas.";
 
 
-var words = string.split(' ');
+var words = string.split(' ');    // This splits the above string based on every whitespace. Each word is now treated as an individual value in an array "words". This allows you to count every word by checking the array "words" length
+
 console.log(words);
 var split = words.length;
 console.log("There are " + split + "words");
