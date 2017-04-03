@@ -23,11 +23,8 @@ for(var i=0; i<driver1.length; i++) {
 }
 console.log(upperName);
 
-var backWards = "";
-for (var i = hacker2.length -1; i >= 0; i--){    // hacker2.length -1 because hacker2 has 4 characters, but starts at position 0 (0,1,2,3)
-  backWards += hacker2[i];
-}
-console.log(backWards);
+var backWards = reverseString(hacker2);
+
 
 
 
@@ -41,10 +38,8 @@ palindrome = palindrome.replace(/[\s\,]/g, '');  //[\s\,]/g, ''); removes all of
 //, '' = replace all whitespace and commas with ''
 
 
-var checkPal ="";
-for (var i = palindrome.length - 1; i >=0; i--){
-  checkPal += palindrome[i];
-}
+var checkPal = reverseString(palindrome);
+
 
 if (palindrome === checkPal){
   console.log("It is a palindrome");
@@ -75,3 +70,11 @@ for(var i = 0; i<words.length; i++ ) {
 }
 
 console.log("Et appears "+etCount+" times");
+
+function reverseString(string) {
+  var result = "";
+  for (var i = string.length - 1; i >= 0; i--){    // string.length -1 compensates for the fact that the initial character position of string is 0
+    result += string[i];
+  }
+  return result;
+}
